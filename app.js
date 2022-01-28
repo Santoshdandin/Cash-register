@@ -9,7 +9,7 @@ const availableNotes = [2000, 500, 100, 20, 10, 5, 1];
 checkButton.addEventListener("click", function validateBillAndCashAmount() {
     hideMessage();
     if(billAmount.value > 0 ) {
-        if(cashGiven.value >= billAmount.value) {
+        if(cashGiven.value > billAmount.value) {
             const amountToBeReturned = cashGiven.value - billAmount.value;
             calculateChange(amountToBeReturned);
         }else {
@@ -22,12 +22,17 @@ checkButton.addEventListener("click", function validateBillAndCashAmount() {
 });
 
 function calculateChange(amountToBeReturned) {
-    //
+    //go over all the available notes
     for (let i = 0; i < availableNotes.length; i++) {
-        const numberOfNotes = Math.trunc(
+        //no of notes need for the denomination
+        const numberOfNotes = Math.trunc (
             amountToBeReturned / availableNotes[i]
             );
-        amountToBeReturned %= availableNotes[i];
+
+            //amount left after calculating the number of notes needed
+        amountToBeReturned = amountToBeReturned % availableNotes[i];
+
+            //updating the no of notes in the table for the current amount
         noOfNotes[i].innerText = numberOfNotes;
         
     }
