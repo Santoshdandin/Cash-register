@@ -3,8 +3,10 @@ const cashGiven = document.querySelector("#cash-given");
 const checkButton = document.querySelector("#check-button");
 const message = document.querySelector("#error-message");
 
+const availableNotes = [2000, 500, 100, 20, 10, 5, 1];
+
 checkButton.addEventListener("click", function validateBillAndCashAmount() {
-    message.style.display = "none";
+    hideMessage();
     if(billAmount.value > 0) {
         if(cashGiven.value >= billAmount.value) {
             const amountToBeReturned = cashGiven.value - billAmount.value;
@@ -18,10 +20,21 @@ checkButton.addEventListener("click", function validateBillAndCashAmount() {
     }
 });
 
-function calculateChange()
+function calculateChange(amountToBeReturned) {
+    for (let i=0; i<availableNotes.length; i++) {
+        const numberOFNOtes = math.trunc(amountToBeReturned/availableNotes[0]);
+        amountToBeReturned %= availableNotes[0];
 
-function showMessage(Message) {
+    }
+    
+}
+
+function hideMessage(){
+    message.style.display = "none";
+}
+
+function showMessage(msg) {
     message.style.display = "block"
-        message.innerText = Message
+        message.innerText = msg;
 
 }
