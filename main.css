@@ -53,17 +53,18 @@ body {
 .output-label {
   font-size: large;
   font-weight: 600;
-  padding-top: 2rem;
+  padding: 2rem;
 }
 
 .output {
-  font-size: 20px;
-  outline: #fff;
-  padding: 1rem 1rem;
-  margin: 1rem;
-  border: 2px solid ;
+  background: green;
+  font-size: 30px;
+  border: none;
+  color: #fff;
+  padding: 0.7rem 1rem;
   border-radius: 0.5rem;
-  width: 250px;
+  outline: #fff;
+  margin: auto;
 }
 
 #check-button {
