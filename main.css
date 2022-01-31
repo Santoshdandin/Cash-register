@@ -10,9 +10,7 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  min-width: 100vw;
   margin: auto;
-  
 }
 
 /* Container */
@@ -52,6 +50,22 @@ body {
   width: 250px;
 }
 
+.output-label {
+  font-size: large;
+  font-weight: 600;
+  padding-top: 2rem;
+}
+
+.output {
+  font-size: 20px;
+  outline: #fff;
+  padding: 1rem 1rem;
+  margin: 1rem;
+  border: 2px solid ;
+  border-radius: 0.5rem;
+  width: 250px;
+}
+
 #check-button {
   background: var(--primary-color);
   border: none;
@@ -68,11 +82,13 @@ body {
 #error-message {
   font-size: larger;
   margin: 1rem 0 0;
+  color: rgb(212, 68, 68);
 }
 
 /* Table */
 .change-table {
-  width: 50%;
+  width: 100%;
+  height: 8rem;
   text-align: justify;
   border-collapse: collapse;
   margin: auto;
@@ -90,4 +106,5 @@ td {
   width: 0%;
   border-collapse: collapse;
   padding: 0.6rem;
+  font-weight: 500;
 }
