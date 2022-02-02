@@ -54,7 +54,7 @@ body {
 .output-label {
   font-size: large;
   font-weight: 600;
-  padding: 2rem;
+  padding:2rem 0rem 0.5rem 0rem;
 }
 
 .output {
@@ -65,7 +65,8 @@ body {
   padding: 0.7rem 1rem;
   border-radius: 0.5rem;
   outline: #fff;
-  margin: auto;
+  margin-top: 0rem;
+  
   
 }
 
